@@ -1,12 +1,14 @@
 {
   "name": "computress",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Discord bot for OpenFusion",
   "main": "main.js",
   "repository": "https://github.com/RagnarLothbrok-Odin/Computress.git",
   "author": "Ragnar Lothbrok",
   "license": "MIT",
+  "type": "module",
   "dependencies": {
+    "chalk": "^5.0.1",
     "discord.js": "^14.2.0"
   },
   "devDependencies": {
