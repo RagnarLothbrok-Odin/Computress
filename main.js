@@ -5,7 +5,9 @@ import { createRequire } from 'module';
 
 const require = createRequire(import.meta.url);
 
-const { token, prefix, serverName } = require('./config.json');
+const {
+  token, prefix, serverName, channelId,
+} = require('./config.json');
 
 let online = false;
 let population = 0;
@@ -14,7 +16,6 @@ const debug = false;
 
 // Create client
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
-const chan = 'computress';
 
 // Ready event
 client.on('ready', () => {
@@ -130,12 +131,12 @@ function processBuffer() {
           population++;
           break;
         case 'chat':
-          if (!debug) client.channels.cache.find((ch) => ch.name === chan).send(queue[i].substring(queue[i].indexOf(' ') + 1));
+          if (!debug) client.channels.cache.find((ch) => ch.id === channelId).send(queue[i].substring(queue[i].indexOf(' ') + 1));
           break;
         case 'email':
           for (let j = 1; queue[i + j][0] === '\t'; j++) { body += `${queue[i + j].substring(1)}\n`; }
           body += '```';
-          if (!debug) client.channels.cache.find((ch) => ch.name === chan).send(head + body);
+          if (!debug) client.channels.cache.find((ch) => ch.id === channelId).send(head + body);
           if (!queue[i + j].includes('endemail')) console.log(`${chalk.red('[WARN]')} ${chalk.whiteBright('Bad email (no endemail)')}`);
           i += j;
           break;

@@ -1,5 +1,6 @@
 {
 	"token": "INSERT-BOT-TOKEN-HERE",
 	"prefix": "!",
-	"serverName": "SERVER-NAME-HERE"
+	"serverName": "SERVER-NAME-HERE",
+	"channelId": "CHANNEL-ID-YOU-WISH-UPDATES-TO-BE-SENT-TO"
 }
