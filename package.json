@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "Discord bot for OpenFusion",
   "main": "main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Gent Semaj",
+  "repository": "https://github.com/RagnarLothbrok-Odin/Computress.git",
+  "author": "Ragnar Lothbrok",
   "license": "MIT",
   "dependencies": {
-    "discord.js": "^12.5.1"
+    "discord.js": "^14.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.21.0",
+    "eslint-config-airbnb-base": "^15.0.0"
   }
 }
