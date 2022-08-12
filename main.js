@@ -9,7 +9,7 @@ const {
   token, prefix, serverName, channelId,
 } = require('./config.json');
 
-let online = false;
+let online;
 let population = 0;
 
 const debug = false;
@@ -58,7 +58,7 @@ socket.on('error', onErr);
 socket.on('end', onEnd);
 
 function refreshStatus() {
-  if (!online) {
+  if (online) {
     client.user.setActivity(
       `${population} players`,
       {
