@@ -1,3 +1,4 @@
+# Project has been rewritten, here: https://github.com/RagnarLothbrok-Odin/FusionFall-Bot
 # Computress
 Computress is a Node-based discord bot for OpenFusion.<br />
 Computress operates by listening to the monitor port on your OF server.
